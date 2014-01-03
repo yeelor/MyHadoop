@@ -1,0 +1,8 @@
+/.settings
+/build
+.buildpath
+.classpath
+.project
+/target
+/log4j
+/doc
