@@ -1,0 +1,67 @@
+agent1.sources = src1
+agent1.sinks = sin1
+agent1.channels = chn1
+
+#source
+agent1.sources.src1.type = netcat
+agent1.sources.src1.bind = 127.0.0.1
+agent1.sources.src1.port = 6666
+agent1.sources.src1.channels = chn1
+
+#sink
+#agent1.sinks.sin1.type = logger
+agent1.sinks.sin1.type = avro
+agent1.sinks.sin1.hostname = 192.168.1.121
+agent1.sinks.sin1.port = 6688
+agent1.sinks.sin1.channel = chn1
+
+
+#channel
+agent1.channels.chn1.type = memory
+
+agent1.sources.src1.interceptors = inter1
+agent1.sources.src1.interceptors.inter1.type = static
+agent1.sources.src1.interceptors.inter1.key = servername
+agent1.sources.src1.interceptors.inter1.value = main
+
+
+
+########################################################
+agent2.sources = src2
+agent2.sinks = sin2
+agent2.channels = chn2
+
+#source
+agent2.sources.src2.type = syslogtcp
+agent2.sources.src2.host = 192.168.1.121
+agent2.sources.src2.port = 5140
+agent2.sources.src2.channels = chn2
+
+#
+agent2.channels.chn2.type = memory
+
+#sink
+agent2.sinks.sin2.type = logger
+agent2.sinks.sin2.channel = chn2
+
+########################################################
+agent3.sources = src3
+agent3.sinks = sin3
+agent3.channels = chn3
+
+#source
+agent3.sources.src3.type = avro
+agent3.sources.src3.bind = 192.168.1.121
+agent3.sources.src3.port = 6688
+agent3.sources.src3.channels = chn3
+
+#
+agent3.channels.chn3.type = memory
+
+#sink
+agent3.sinks.sin3.type = hdfs
+agent3.sinks.sin3.hdfs.path = /flume/log/
+agent3.sinks.sin3.hdfs.fileType = DataStream
+agent3.sinks.sin3.hdfs.rollInterval = 5
+agent3.sinks.sin3.hdfs.filePrefix = log%{servername}
+agent3.sinks.sin3.channel = chn3

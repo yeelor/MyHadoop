@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Mar 06 19:39:03 CST 2014
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=false
+onejar.checkbox=false
+jarname=mapr.jar
+manifest.mergeall=false
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|MyHadoop>~com/;<po|MyHadoop>~count/;<po|MyHadoop>~pipes/;<po|MyHadoop>~flume/;<po|MyHadoop>~streaming/;<po|MyHadoop>~META-INF/;<po|MyHadoop>~shortestpath/;<po|MyHadoop>~pagerank/;<po|MyHadoop>~shortestpath2/;<po|MyHadoop>~friends/;<po|MyHadoop>~org/~fansy/;<po|MyHadoop>~MyMapre$Map.class;<po|MyHadoop>~MyMapre$Reduce.class;<po|MyHadoop>~MyMapre.class;<jar|commons-pool2-2.0.jar>;<jar|hadoop-core-1.2.1.jar>;<jar|commons-cli-1.2.jar>;<jar|xmlenc-0.52.jar>;<jar|jersey-core-1.8.jar>;<jar|jersey-json-1.8.jar>;<jar|jettison-1.1.jar>;<jar|stax-api-1.0.1.jar>;<jar|jaxb-impl-2.2.3-1.jar>;<jar|jaxb-api-2.2.2.jar>;<jar|stax-api-1.0-2.jar>;<jar|activation-1.1.jar>;<jar|jackson-core-asl-1.7.1.jar>;<jar|jackson-jaxrs-1.7.1.jar>;<jar|jackson-xc-1.7.1.jar>;<jar|jersey-server-1.8.jar>;<jar|asm-3.1.jar>;<jar|commons-httpclient-3.0.1.jar>;<jar|junit-3.8.1.jar>;<jar|commons-logging-1.0.3.jar>;<jar|commons-codec-1.4.jar>;<jar|commons-math-2.1.jar>;<jar|commons-configuration-1.6.jar>;<jar|commons-collections-3.2.1.jar>;<jar|commons-lang-2.4.jar>;<jar|commons-digester-1.8.jar>;<jar|commons-beanutils-1.7.0.jar>;<jar|commons-beanutils-core-1.8.0.jar>;<jar|commons-net-1.4.1.jar>;<jar|jetty-6.1.26.jar>;<jar|servlet-api-2.5-20081211.jar>;<jar|jetty-util-6.1.26.jar>;<jar|jasper-runtime-5.5.12.jar>;<jar|jasper-compiler-5.5.12.jar>;<jar|jsp-api-2.1-6.1.14.jar>;<jar|servlet-api-2.5-6.1.14.jar>;<jar|jsp-2.1-6.1.14.jar>;<jar|ant-1.6.5.jar>;<jar|commons-el-1.0.jar>;<jar|jets3t-0.6.1.jar>;<jar|hsqldb-1.8.0.10.jar>;<jar|oro-2.0.8.jar>;<jar|core-3.1.1.jar>;<jar|jackson-mapper-asl-1.8.8.jar>;<jar|mahout-core-0.8.jar>;<jar|mahout-core-0.8-job.jar>;<jar|mahout-examples-0.8.jar>;<jar|mahout-examples-0.8-job.jar>;<jar|mahout-integration-0.8.jar>;<jar|mahout-math-0.8.jar>
+includes=
