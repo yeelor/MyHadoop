@@ -25,8 +25,11 @@ public class Sort {
 		public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 			String line = value.toString();//去掉空格
 			line  = line.trim();
-			data.set(Integer.parseInt(line));
-			context.write(data, new IntWritable(1));
+			if((line!=null)&&(!line.equals(""))){
+				data.set(Integer.parseInt(line));
+				context.write(data, new IntWritable(1));
+			}
+				
 		}
 
 	}
@@ -52,7 +55,9 @@ public class Sort {
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
 		// 这句话很关键
-		conf.set("mapred.job.tracker", "192.168.162.128:9001");
+		conf.set("mapred.job.tracker", "lenovo0:9001");
+		
+//		conf.set("mapred.reduce.tasks", "1");
 
 		String []ioArgs = new String[]{"sort_in","sort_out_"+new SimpleDateFormat("yyyyMMddHHmmss").format(new Date())};
 		String[] otherArgs = new GenericOptionsParser(conf, ioArgs).getRemainingArgs();
@@ -72,6 +77,12 @@ public class Sort {
 		// 设置输出类型
 		job.setOutputKeyClass(IntWritable.class);
 		job.setOutputValueClass(IntWritable.class);
+		
+		
+		
+		//reduce的量默认就是1.这一步可以不写。如果要保证全局有序，在没有重写Partition的情况下，设置为1是正确的。
+		job.setNumReduceTasks(1);
+		
 
 		// 设置输入和输出目录
 		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));

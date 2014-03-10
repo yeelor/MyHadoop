@@ -48,7 +48,7 @@ public class WordCount {
 		long startTime = System.currentTimeMillis();
 		 
 		Configuration conf  = new Configuration();
-		conf.set("mapred.job.tracker", "super:9001");
+		conf.set("mapred.job.tracker", "lenovo0:9001");
 		String []ars = new String []{"/user/hadoop/input","/user/hadoop/wordcount_output_"+new SimpleDateFormat("yyyyMMddHHmmss").format(new Date())};
 		String[] otherArgs = new GenericOptionsParser(conf,ars).getRemainingArgs();
 		if(otherArgs.length!=2){
@@ -68,7 +68,7 @@ public class WordCount {
 		job.waitForCompletion(true);
 		
 		long endTime = System.currentTimeMillis();
-		System.out.println("time cost"+(endTime-startTime));
+		System.out.println("time cost "+(endTime-startTime));
 		
 	}
 
