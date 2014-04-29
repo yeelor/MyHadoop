@@ -1,0 +1,51 @@
+第1章节: （4课时） 搜索引擎自动推荐 1-4
+> 新平台搭建： 使用VirtualBox创建CentOs虚拟机，并使用RPM的方式安装和使用Hadoop
+> 内存数据库Redis的安装和基本使用> 搜索引擎自动推荐算法讲解
+> 使用JqueryUI + Ajax + Redis搭建前后台框架
+> 使用Map Reduce实现数据统计算法
+> 定制Map Reduce输出，将数据直接写入Redis内存数据库
+
+第2章节: (3课时）好友智能推荐 5-7 
+> 应用背景和算法详细讲解
+> Web框架搭建Struts2 + Redis
+> 使用Map Reduce结合Redis实现潜在好友查找算法
+> 完整的应用逻辑实现：前台好友关注，后台潜在好友查找，再到前台潜在好友推荐第
+
+3章节:(2课时） Hadoop Streaming 8-9
+> 非Java的Map Reduce实现
+> 如何使用脚本语言实现一个Map Reduce任务 
+> 如何使用C语言实现一个Map Reduce任务
+
+第4章节: (1课时） Hadoop Pipes 10
+> 基于Hadoop Pipes，使用C++实现Map Reduce任务
+
+第5章节: (2课时） Apache Flume基础 11-12
+> Apache Flume概述> Flume Agent详细介绍及使用
+> 深入Flume子模块: Source, Sink及Channel的使用
+
+第6章节: (3课时） Flume实践及分布式应用 13-15
+> 与搜索引擎自动推荐应用的结合
+> 搭建分布式的flume应用
+
+第7章节: (5课时） 最短路径算法的Hadoop实现  16-21
+>最短路径算法介绍> 如何使用MapReduce实现最短路径算法
+> 找到城市任意公交站点之间的最短路径
+
+第8章节: (3课时）Hadoop集群管理 22-25 
+> Hadoop的日志管理> 动态添加和删除Hadoop节点
+> Namenode和Datanode目录结构介绍
+> HDFS的数据安全性：fsimage和editlog 
+> Hadoop管理工具dfsadmin和fsck的使用
+23 生产环境的Hadoop集群安装 
+24 集群管理
+25 Hadoop升级和优化
+
+
+                  
+第9章节:(5课时）PageRank算法的Hadoop实现 26  
+> Google的成名之作：PageRank算法介绍
+> 如何使用Hadoop实现PageRank算法
+
+27，28 编译、序列化和IPC
+
+

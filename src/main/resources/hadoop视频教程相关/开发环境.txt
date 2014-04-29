@@ -1,0 +1,15 @@
+Eclipse Java EE IDE for Web Developers.
+
+Version: Juno Service Release 1
+Build id: 20120920-0800
+
+²å¼þ
+http://kurucz-grafika.de/fatjar/
+net.sf.fjep.fatjar	0.0.31	net.sf.fjep.fatjar.feature.group	feri
+
+http://code.google.com/p/run-jetty-run/
+Run Jetty Run Feature (Require)	1.3.2	runjettyrun_feature.feature.group	
+RunJettyRun Jetty7 Support (Optional)	1.3.2
+RunJettyRun Jetty8 Support (Optional)	1.3.2
+
+CentOS release 6.3 (Final) 32Î»

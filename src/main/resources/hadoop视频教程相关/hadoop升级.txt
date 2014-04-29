@@ -1,0 +1,33 @@
+1，stop-mapred.sh 
+   停止所有MR任务
+
+2，检查HDFS
+hadoop fsck / -files -blocks -locations > dfs-v-old-fsck-1.log 
+hadoop dfs -lsr / > dfs-v-old-lsr-1.log 
+hadoop dfsadmin -report > dfs-v-old-report-1.log
+
+3，重启HDFS，重复第2步，检查HDFS
+stop-dfs.sh
+start-dfs.sh
+
+4，备份namenode数据
+dfs.name.dir/edits
+dfs.name.dir/image/fsimage
+
+4.1，在本地磁盘备份重要的数据
+
+5，停止HDFS
+stop-dfs.sh 
+
+6，重新安装新版本hadoop，备份原来的配置文件，修改新版本的配置文件
+
+7，升级HDFS
+start-dfs.sh -upgrade 
+
+8，监控升级
+hadoop dfsadmin -upgradeProgress details
+
+9，使用第2步中的命令，检查升级过后的文件系统
+
+10，提交升级
+hadoop dfsadmin -finalizeUpgrade
