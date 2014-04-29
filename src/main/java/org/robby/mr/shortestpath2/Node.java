@@ -7,11 +7,12 @@ import org.apache.commons.lang.StringUtils;
 
 public class Node {
 	private String backpointer;
+	//相邻结点的结合
 	private String[] adjacentNodeNames;
 	
 	//新增加的一个属性
 	public String name;
-	public String startName;
+//	public String startName;
 	public static final char fieldSeparator = '\t';
 	
 	private int distance = Integer.MAX_VALUE;
